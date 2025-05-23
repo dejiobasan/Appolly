@@ -1,39 +1,87 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/Images/Logo.png";
+import { Bars3Icon, XCircleIcon } from "@heroicons/react/24/solid";
+import { useState } from "react";
+
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="bg-white text-[#2c2c2c] shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-6 font-medium">
+      <div className="mx-auto lg:p-2 lg:h-16 p-1 h-12 flex items-center justify-between">
+      <button
+            className="lg:hidden ml-2"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <Bars3Icon className="h-8 w-8 text-black" />
+          </button>
+        <div className="flex-1 lg:flex items-center lg:gap-12 font-medium justify-start lg:ml-4 hidden">
           <Link
             to="#"
-            className="text-[#5c4efc] border-b-2 border-[#5c4efc] pb-1"
+            className="text-[#5c4efc] border-b-2 border-[#5c4efc] lg:pb-1 lg:text-xl"
           >
             HOME
           </Link>
-          <Link to="#">ABOUT</Link>
-          <Link to="#">FEATURES</Link>
+          <Link to="#" className="lg:text-xl">
+            ABOUT
+          </Link>
+          <Link to="#" className="lg:text-xl">
+            FEATURES
+          </Link>
         </div>
 
-        <div className="text-2xl font-bold flex items-center gap-2">
+        <div className="flex-1 flex justify-center lg:ml-12 ml-8">
           <img
             src={logo}
             alt="Appolly Logo"
-            className="bg-white shadow-lg -mt-4 -mb-4 p-2 h-20 w-20 object-contain"
+            className="bg-white shadow-lg rounded-sm lg:-mt-4 lg:-mb-4 p-2 lg:h-[90px] lg:w-[200px] h-[70px] w-[180px] -mt-2 -mb-2 object-contain"
           />
         </div>
 
-        <div className="flex items-center gap-6 font-medium">
-          <Link to="#">SCREENSHOT</Link>
-          <Link to="#">BLOG</Link>
-          <Link
-            to="#"
-            className="bg-[#5c4efc] text-white px-4 py-2 rounded border border-[#5c4efc] hover:bg-white hover:text-[#5c4efc] transition"
-          >
-            DOWNLOAD
+        <div className="flex-1 hidden lg:flex items-center lg:-ml-16 justify-end lg:gap-6 font-medium mr-4">
+          <Link to="#" className="lg:text-xl">
+            SCREENSHOT
+          </Link>
+          <Link to="#" className="lg:text-xl">
+            BLOG
           </Link>
         </div>
+        <Link
+          to="#"
+          className="bg-[#5c4efc] text-white lg:text-xl px-2 py-2 lg:px-4 lg:py-2 rounded border border-[#5c4efc] hover:bg-white hover:text-[#5c4efc] transition ml-6"
+        >
+          DOWNLOAD
+        </Link>
       </div>
+      {menuOpen && (
+        <div className="lg:hidden absolute left-12 top-28 mt-2 z-50 w-[267px]">
+          <div className="bg-white shadow-lg p-8 flex flex-col gap-6 relative">
+            <button
+              className="absolute top-4 right-4"
+              onClick={() => setMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <XCircleIcon className="h-8 w-8 text-[#5c4efc]" />
+            </button>
+            <Link to="#" className="text-black text-sm" onClick={() => setMenuOpen(false)}>
+              HOME
+            </Link>
+            <Link to="#" className="text-sm text-black" onClick={() => setMenuOpen(false)}>
+              ABOUT
+            </Link>
+            <Link to="#" className="text-sm text-black" onClick={() => setMenuOpen(false)}>
+              FEATURES
+            </Link>
+            <Link to="#" className="text-sm text-black" onClick={() => setMenuOpen(false)}>
+              SCREENSHOT
+            </Link>
+            <Link to="#" className="text-sm text-black" onClick={() => setMenuOpen(false)}>
+              BLOG
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

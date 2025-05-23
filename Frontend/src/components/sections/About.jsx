@@ -16,7 +16,7 @@ const About = () => {
         className="flex flex-col md:flex-row lg:flex-row items-center justify-center lg:mt-12 mt-8 relative"
         style={{ minHeight: "8rem" }}
       >
-        <div className="absolute lg:left-16 lg:bottom-2 md:left-6 md:bottom-24 top-60 w-60 h-28 bg-white rounded-[50%_50%_50%_50%/60%_60%_40%_40%] shadow-lg z-0" />
+        <div className="absolute lg:left-12 lg:translate-y-50 md:left-2 md:translate-y-55 top-60 w-60 h-28 bg-white rounded-[50%_50%_50%_50%/60%_60%_40%_40%] shadow-lg z-0" />
         <img
           src={android}
           alt="Android"

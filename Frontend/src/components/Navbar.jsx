@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-[#2c2c2c] shadow-md">
+    <nav className="bg-white text-[#2c2c2c] shadow-md mt-8 mx-4 rounded-md">
       <div className="mx-auto lg:p-2 lg:h-16 p-1 h-12 flex items-center justify-between">
       <button
             className="lg:hidden ml-2"
@@ -55,7 +55,7 @@ export default function Navbar() {
         </Link>
       </div>
       {menuOpen && (
-        <div className="lg:hidden absolute left-12 top-28 mt-2 z-50 w-[267px]">
+        <div className="lg:hidden absolute md:left-16 md:top-28 md:mt-12 md:z-50  z-20 mt-2 md:w-[267px]">
           <div className="bg-white shadow-lg p-8 flex flex-col gap-6 relative">
             <button
               className="absolute top-4 right-4"

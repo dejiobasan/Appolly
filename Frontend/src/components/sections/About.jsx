@@ -5,7 +5,9 @@ import android from "../../assets/Images/Android.png";
 const About = () => {
   return (
     <div className="relative flex flex-col items-center justify-center min-h-screen bg-white px-6 py-12">
-      <h1 className="lg:text-4xl text-2xl md:font-bold  lg:mb-8 mb-4">ABOUT OUR APP</h1>
+      <h1 className="lg:text-4xl text-2xl md:font-bold  lg:mb-8 mb-4">
+        ABOUT OUR APP
+      </h1>
       <p className="text-sm text-center lg:max-w-xl max-w-lg">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
         ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet

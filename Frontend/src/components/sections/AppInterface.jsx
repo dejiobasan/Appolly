@@ -43,7 +43,9 @@ const AppInterface = () => {
       </div>
       <div className="flex md:flex-row flex-col items-center justify-center relative z-10 lg:space-x-4 space-x-2">
         <div className="flex flex-col items-start justify-center relative z-10 px-4">
-          <h2 className="lg:text-2xl text-lg font-bold text-black">DOWNLOAD APP NOW</h2>
+          <h2 className="lg:text-2xl text-lg font-bold text-black">
+            DOWNLOAD APP NOW
+          </h2>
           <p className="text-sm text-black mt-4 max-w-xl">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra
             nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.

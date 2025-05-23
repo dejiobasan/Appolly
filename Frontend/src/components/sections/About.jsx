@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
-import android from "../../assets/Images/android.png";
+import android from "../../assets/Images/Android.png";
 
 const About = () => {
   return (

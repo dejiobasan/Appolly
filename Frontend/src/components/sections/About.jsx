@@ -26,7 +26,7 @@ const About = () => {
           <div className="space-y-6 w-full px-2">
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center">
-                <span class="text-indigo-600 mr-3 text-3xl">
+                <span className="text-indigo-600 mr-3 text-3xl">
                   <CheckCircleIcon className="h-6 w-6 text-[#5c4efc] mr-2" />
                 </span>
                 CREATIVE DESIGN
@@ -39,7 +39,7 @@ const About = () => {
             </div>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-2 flex items-center">
-                <span class="text-indigo-600 mr-3 text-3xl">
+                <span className="text-indigo-600 mr-3 text-3xl">
                   <CheckCircleIcon className="h-6 w-6 text-[#5c4efc] mr-2" />
                 </span>
                 EASY TO USE
@@ -52,7 +52,7 @@ const About = () => {
             </div>
             <div className="bg-white rounded-xl shadow-lg lg:p-8 p-4">
               <h4 className="text-2xl font-bold text-gray-900 mb-2 flex items-center">
-                <span class="text-indigo-600 mr-3 text-3xl">
+                <span className="text-indigo-600 mr-3 text-3xl">
                   <CheckCircleIcon className="h-6 w-6 text-[#5c4efc] mr-2" />
                 </span>
                 BEST USER EXPERIENCE

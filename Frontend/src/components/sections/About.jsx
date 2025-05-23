@@ -16,13 +16,13 @@ const About = () => {
         className="flex flex-col md:flex-row lg:flex-row items-center justify-center lg:mt-12 mt-8 relative"
         style={{ minHeight: "8rem" }}
       >
-        <div className="absolute lg:left-16 lg:bottom-2 md:left-6 md:bottom-24  w-60 h-28 bg-white rounded-[50%_50%_50%_50%/60%_60%_40%_40%] shadow-lg z-0" />
+        <div className="absolute lg:left-16 lg:bottom-2 md:left-6 md:bottom-24 top-60 w-60 h-28 bg-white rounded-[50%_50%_50%_50%/60%_60%_40%_40%] shadow-lg z-0" />
         <img
           src={android}
           alt="Android"
           className="w-60 md:w-72 lg:w-96 h-auto relative z-10 mx-auto"
         />
-        <div className="flex flex-col items-center justify-center lg:mt-0 lg:ml-40 ml-20 mt-12 w-full max-w-xl">
+        <div className="flex flex-col items-center justify-center lg:mt-0 lg:ml-40 md:ml-20 mt-12 w-full max-w-xl">
           <div className="space-y-6 w-full px-2">
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center">

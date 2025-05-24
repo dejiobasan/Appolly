@@ -5,7 +5,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 
 const Team = () => {
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen bg-white lg:py-20 lg:mt-12 md:py-30 md:mt-32 mt-60 p-6">
+    <div className="relative flex flex-col items-center justify-center min-h-screen bg-white lg:py-20 lg:mt-24 md:py-30 md:mt-32 mt-48 p-6">
       <h1 className="lg:text-4xl text-2xl md:font-bold lg:mb-8 mb-4">
         OUR RELATIVE TEAM
       </h1>

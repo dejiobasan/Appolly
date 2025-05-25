@@ -1,5 +1,4 @@
 import Navbar from "../Navbar";
-
 import shapeBG from "../../assets/Images/BackgroundImage.png";
 import AppImage from "../../assets/Images/Mobile.png";
 import GooglePlay from "../../assets/Images/GooglePlay.png";

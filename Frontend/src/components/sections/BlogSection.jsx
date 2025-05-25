@@ -34,7 +34,7 @@ const BlogSection = () => {
               nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
             </p>
             <Link
-              to={"/"}
+              to={"/Blog"}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 text-sm inline-block text-[#5c4efc]"
@@ -58,7 +58,7 @@ const BlogSection = () => {
               nunc ante velit vitae.
             </p>
             <Link
-              to={"/"}
+              to={"/Blog"}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 text-sm inline-block text-[#5c4efc]"
@@ -82,7 +82,7 @@ const BlogSection = () => {
               nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
             </p>
             <Link
-              to={"/"}
+              to={"/Blog"}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 text-sm inline-block text-[#5c4efc]"
@@ -92,27 +92,29 @@ const BlogSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute shadow-md left-1/2 -translate-x-1/2 md:bottom-[-3rem] bottom-[-11rem] z-20 w-full flex justify-center pointer-events-none">
-        <div className="relative bg-white rounded-2xl shadow-xl max-w-4xl w-11/12 sm:w-4/5 mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-10 py-6 md:py-8 space-y-4 md:space-y-0 md:space-x-12 pointer-events-auto border border-gray-200">
-          <div className="flex md:flex-row flex-col items-center space-x-3 md:space-x-4">
-            <span className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#5c4efc] shadow-md">
-              <EnvelopeIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-            </span>
-            <p className="font-semibold text-xs md:text-sm text-black text-center">
-              info@youremail.com
-            </p>
-          </div>
-          <span className="w-full h-0.5 border-t border-gray-300 md:w-0 md:h-16 md:border-t-0 md:border-l"></span>
-          <div className="flex md:flex-row flex-col items-center space-x-3 md:space-x-4">
-            <span className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#5c4efc] shadow-md">
-              <PhoneIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
-            </span>
-            <p className="font-semibold text-xs md:text-sm text-black text-center">
-              +1 234 567 890
-            </p>
+      <section id="contact">
+        <div className="absolute shadow-md left-1/2 -translate-x-1/2 md:bottom-[-3rem] bottom-[-11rem] z-20 w-full flex justify-center pointer-events-none">
+          <div className="relative bg-white rounded-2xl shadow-xl max-w-4xl w-11/12 sm:w-4/5 mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-10 py-6 md:py-8 space-y-4 md:space-y-0 md:space-x-12 pointer-events-auto border border-gray-200">
+            <div className="flex md:flex-row flex-col items-center space-x-3 md:space-x-4">
+              <span className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#5c4efc] shadow-md">
+                <EnvelopeIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              </span>
+              <p className="font-semibold text-xs md:text-sm text-black text-center">
+                info@youremail.com
+              </p>
+            </div>
+            <span className="w-full h-0.5 border-t border-gray-300 md:w-0 md:h-16 md:border-t-0 md:border-l"></span>
+            <div className="flex md:flex-row flex-col items-center space-x-3 md:space-x-4">
+              <span className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#5c4efc] shadow-md">
+                <PhoneIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              </span>
+              <p className="font-semibold text-xs md:text-sm text-black text-center">
+                +1 234 567 890
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

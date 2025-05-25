@@ -9,26 +9,26 @@ export default function Navbar() {
   return (
     <nav className="bg-white text-[#2c2c2c] shadow-md mt-8 mx-4 rounded-md">
       <div className="mx-auto lg:p-2 lg:h-16 p-1 h-12 flex items-center justify-between">
-      <button
-            className="lg:hidden ml-2"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            <Bars3Icon className="h-8 w-8 text-black" />
-          </button>
+        <button
+          className="lg:hidden ml-2"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Open menu"
+        >
+          <Bars3Icon className="h-8 w-8 text-black" />
+        </button>
         <div className="flex-1 lg:flex items-center lg:gap-12 font-medium justify-start lg:ml-4 hidden">
-          <Link
-            to="#"
+          <a
+            href="#home"
             className="text-[#5c4efc] border-b-2 border-[#5c4efc] lg:pb-1 lg:text-xl"
           >
             HOME
-          </Link>
-          <Link to="#" className="lg:text-xl">
+          </a>
+          <a href="#about" className="lg:text-xl hover:text-[#5c4efc]">
             ABOUT
-          </Link>
-          <Link to="#" className="lg:text-xl">
+          </a>
+          <a href="#features" className="lg:text-xl hover:text-[#5c4efc]">
             FEATURES
-          </Link>
+          </a>
         </div>
 
         <div className="flex-1 flex justify-center lg:ml-12 ml-8">
@@ -40,10 +40,15 @@ export default function Navbar() {
         </div>
 
         <div className="flex-1 hidden lg:flex items-center lg:-ml-16 justify-end lg:gap-6 font-medium mr-4">
-          <Link to="#" className="lg:text-xl">
+          <a href="#screenshot" className="lg:text-xl hover:text-[#5c4efc]">
             SCREENSHOT
-          </Link>
-          <Link to="#" className="lg:text-xl">
+          </a>
+          <Link
+            to={"/Blog"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:text-xl hover:text-[#5c4efc]"
+          >
             BLOG
           </Link>
         </div>
@@ -64,19 +69,39 @@ export default function Navbar() {
             >
               <XCircleIcon className="h-8 w-8 text-[#5c4efc]" />
             </button>
-            <Link to="#" className="text-black text-sm" onClick={() => setMenuOpen(false)}>
+            <a
+              href="#home"
+              className="text-black text-sm hover:text-[#5c4efc]"
+              onClick={() => setMenuOpen(false)}
+            >
               HOME
-            </Link>
-            <Link to="#" className="text-sm text-black" onClick={() => setMenuOpen(false)}>
+            </a>
+            <a
+              href="#about"
+              className="text-sm text-black hover:text-[#5c4efc]"
+              onClick={() => setMenuOpen(false)}
+            >
               ABOUT
-            </Link>
-            <Link to="#" className="text-sm text-black" onClick={() => setMenuOpen(false)}>
+            </a>
+            <a
+              href="#features"
+              className="text-sm text-black hover:text-[#5c4efc]"
+              onClick={() => setMenuOpen(false)}
+            >
               FEATURES
-            </Link>
-            <Link to="#" className="text-sm text-black" onClick={() => setMenuOpen(false)}>
+            </a>
+            <a
+              href="#screenshot"
+              className="text-sm text-black hover:text-[#5c4efc]"
+              onClick={() => setMenuOpen(false)}
+            >
               SCREENSHOT
-            </Link>
-            <Link to="#" className="text-sm text-black" onClick={() => setMenuOpen(false)}>
+            </a>
+            <Link
+              to="/Blog"
+              className="text-sm text-black hover:text-[#5c4efc]"
+              onClick={() => setMenuOpen(false)}
+            >
               BLOG
             </Link>
           </div>

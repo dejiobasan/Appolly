@@ -1,9 +1,49 @@
-import React from "react";
-import Reviews from "../../assets/Images/Review.png";
+import { useEffect, useState } from "react";
 import shapeBG from "../../assets/Images/BackgroundImage.png";
-import  { EllipsisHorizontalIcon } from "@heroicons/react/24/solid";
+import Customers from "../../assets/Images/Customers.png";
+
+const testimonials = [
+  {
+    name: "ANN LUBIN",
+    role: "CO-FOUNDER",
+    image: Customers,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
+          ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus
+          amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus
+          tempor, ac nunc libero urna, feugiat.`,
+  },
+  {
+    name: "JOHN DOE",
+    role: "CEO",
+    image: Customers,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
+          ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus
+          amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus
+          tempor, ac nunc libero urna, feugiat.`,
+  },
+  {
+    name: "JANE SMITH",
+    role: "CTO",
+    image: Customers,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
+          ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus
+          amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus
+          tempor, ac nunc libero urna, feugiat.`,
+  },
+];
 
 const HappyCustomer = () => {
+  const [currentIndex, setCurrentIndex] = useState(1);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
+  const current = testimonials[currentIndex];
+
   return (
     <div className="relative flex flex-col min-h-screen items-center justify-center">
       <div
@@ -21,13 +61,31 @@ const HappyCustomer = () => {
           tempor, ac nunc libero urna, feugiat.
         </p>
       </div>
-      <div className="flex flex-col items-center justify-center relative z-10 px-4">
-        <img
-          src={Reviews}
-          alt="Reviews"
-          className="w-120 md:w-160 lg:w-280 h-auto relative z-10 mx-auto mt-8 lg:mt-0"
-        />
-        <EllipsisHorizontalIcon className="lg:block h-30 w-30 text-white" />
+      <div className="flex flex-row items-center justify-center relative z-10 px-4 pt-12">
+        <div className="transition-all duration-700 transform scale-100 opacity-100 bg-white p-6 rounded-2xl max-w-2xl shadow-lg space-y-4">
+          <img
+            src={current.image}
+            alt={current.name}
+            className="w-20 h-auto mx-auto"
+          />
+          <h2 className="text-center font-bold text-black">{current.name}</h2>
+          <p className="font-semibold text-center text-black">{current.role}</p>
+          <p className="text-center text-black text-sm">{current.text}</p>
+        </div>
+      </div>
+      <div className="flex justify-center items-center mt-6 space-x-2 z-10 relative">
+        {testimonials.map((_, idx) => (
+          <button
+            key={idx}
+            onClick={() => setCurrentIndex(idx)}
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${
+              currentIndex === idx
+                ? "bg-[#5c4efc] scale-110"
+                : "bg-gray-300 hover:bg-[#5c4efc]"
+            }`}
+            aria-label={`Go to testimonial ${idx + 1}`}
+          />
+        ))}
       </div>
     </div>
   );

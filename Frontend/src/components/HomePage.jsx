@@ -10,17 +10,19 @@ import Footer from "./sections/Footer";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Hero />
-      <About />
-      <AppFeatures />
-      <AppInterface />
-      <Usage />
-      <Team />
-      <HappyCustomer />
-      <BlogSection />
-      <Footer />
-    </div>
+    <section id="home">
+      <div className="min-h-screen flex flex-col">
+        <Hero />
+        <About />
+        <AppFeatures />
+        <AppInterface />
+        <Usage />
+        <Team />
+        <HappyCustomer />
+        <BlogSection />
+        <Footer />
+      </div>
+    </section>
   );
 };
 

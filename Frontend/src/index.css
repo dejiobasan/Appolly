@@ -3,3 +3,7 @@
 @theme {
     --color-purple-500: #5956E9;
 }
+
+html {
+  scroll-behavior: smooth;
+}

@@ -17,12 +17,14 @@ export default function Navbar() {
           <Bars3Icon className="h-8 w-8 text-black" />
         </button>
         <div className="flex-1 lg:flex items-center lg:gap-12 font-medium justify-start lg:ml-4 hidden">
-          <a
-            href="#home"
+          <Link
+            to={"/"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-[#5c4efc] border-b-2 border-[#5c4efc] lg:pb-1 lg:text-xl"
           >
             HOME
-          </a>
+          </Link>
           <a href="#about" className="lg:text-xl hover:text-[#5c4efc]">
             ABOUT
           </a>
@@ -60,7 +62,7 @@ export default function Navbar() {
         </Link>
       </div>
       {menuOpen && (
-        <div className="lg:hidden absolute md:left-16 md:top-28 md:mt-12 md:z-50  z-20 mt-2 md:w-[267px]">
+        <div className="lg:hidden fixed inset-0 md:left-16 md:top-28 md:mt-12 md:z-50 z-20 mt-2 md:w-[267px]">
           <div className="bg-white shadow-lg p-8 flex flex-col gap-6 relative">
             <button
               className="absolute top-4 right-4"
@@ -69,13 +71,15 @@ export default function Navbar() {
             >
               <XCircleIcon className="h-8 w-8 text-[#5c4efc]" />
             </button>
-            <a
-              href="#home"
+            <Link
+              to={"/"}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-black text-sm hover:text-[#5c4efc]"
               onClick={() => setMenuOpen(false)}
             >
               HOME
-            </a>
+            </Link>
             <a
               href="#about"
               className="text-sm text-black hover:text-[#5c4efc]"
@@ -105,6 +109,11 @@ export default function Navbar() {
               BLOG
             </Link>
           </div>
+          <div
+            className="flex-1"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu overlay"
+          />
         </div>
       )}
     </nav>

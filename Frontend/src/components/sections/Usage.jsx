@@ -21,7 +21,7 @@ const Usage = () => {
           </p>
         </div>
       </div>
-      <div className="absolute left-1/2 lg:bottom-0 md:-bottom-24 -bottom-14 -translate-x-1/2 translate-y-1/2 z-20 w-full flex justify-center">
+      <div className="absolute left-1/2 lg:bottom-0 md:-bottom-24 -bottom-18 -translate-x-1/2 translate-y-1/2 z-20 w-full flex justify-center">
         <div className="relative rounded-3xl overflow-hidden w-11/12 sm:w-4/5 md:w-3/4 lg:max-w-4xl mx-auto">
           <iframe
             src="https://www.youtube.com/embed/Tq-2IwLg7f8?si=pi653u0Qv4d_ii9F"

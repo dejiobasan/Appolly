@@ -1,6 +1,4 @@
 
-
-
 const BlogPage = () => {
   return (
     <div>BlogPage</div>

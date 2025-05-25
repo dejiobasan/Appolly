@@ -44,7 +44,7 @@ export default function Navbar() {
             SCREENSHOT
           </a>
           <Link
-            to={"/Blog"}
+            to={"/blog"}
             target="_blank"
             rel="noopener noreferrer"
             className="lg:text-xl hover:text-[#5c4efc]"

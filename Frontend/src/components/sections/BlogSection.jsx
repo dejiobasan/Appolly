@@ -34,7 +34,7 @@ const BlogSection = () => {
               nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
             </p>
             <Link
-              to={"/Blog"}
+              to={"/blog"}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 text-sm inline-block text-[#5c4efc]"
@@ -58,7 +58,7 @@ const BlogSection = () => {
               nunc ante velit vitae.
             </p>
             <Link
-              to={"/Blog"}
+              to={"blog"}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 text-sm inline-block text-[#5c4efc]"
@@ -82,7 +82,7 @@ const BlogSection = () => {
               nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.
             </p>
             <Link
-              to={"/Blog"}
+              to={"/blog"}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 text-sm inline-block text-[#5c4efc]"

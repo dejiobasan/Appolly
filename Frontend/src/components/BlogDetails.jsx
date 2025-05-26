@@ -22,6 +22,8 @@ import { FaCaretRight, FaRegCommentDots } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { MdTimer } from "react-icons/md";
 import { PiLineVertical } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 
 const Blogs = [
   {
@@ -77,6 +79,18 @@ const Blogs = [
 ];
 
 const BlogDetails = () => {
+  const navigate = useNavigate();
+  const handleSectionNav = useCallback(
+    (sectionId) => {
+      navigate(`/#${sectionId}`);
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    },
+    [navigate]
+  );
+
   return (
     <div className="relative flex flex-col min-h-screen">
       <div className="relative flex flex-col h-3/4">
@@ -408,30 +422,30 @@ const BlogDetails = () => {
             QUICK LINKS
           </h1>
           <div className="flex flex-col items-start justify-center relative z-10">
-            <a
-              href="#home"
-              className="text-sm text-white mb-2 hover:text-[#5c4efc]"
+            <button
+              className="text-sm text-white mb-2 hover:text-[#5c4efc] text-left"
+              onClick={() => handleSectionNav("home")}
             >
               Home
-            </a>
-            <a
-              href="#about"
-              className="text-sm text-white mb-2 hover:text-[#5c4efc]"
+            </button>
+            <button
+              className="text-sm text-white mb-2 hover:text-[#5c4efc] text-left"
+              onClick={() => handleSectionNav("about")}
             >
               About
-            </a>
-            <a
-              href="#features"
-              className="text-sm text-white mb-2 hover:text-[#5c4efc]"
+            </button>
+            <button
+              className="text-sm text-white mb-2 hover:text-[#5c4efc] text-left"
+              onClick={() => handleSectionNav("features")}
             >
               Features
-            </a>
-            <a
-              href="#contact"
-              className="text-sm text-white mb-2 hover:text-[#5c4efc]"
+            </button>
+            <button
+              className="text-sm text-white mb-2 hover:text-[#5c4efc] text-left"
+              onClick={() => handleSectionNav("contact")}
             >
               Contact
-            </a>
+            </button>
           </div>
         </div>
         <div className="flex flex-col flex-1 items-start justify-start relative z-10 px-4">

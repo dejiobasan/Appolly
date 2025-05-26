@@ -14,7 +14,7 @@ import BlogImage6 from "../assets/Images/BlogImages/BlogImage6.jpg";
 import BlogImage7 from "../assets/Images/BlogImages/BlogImage7.jpg";
 import { useState, useCallback } from "react";
 import { PaperAirplaneIcon } from "@heroicons/react/24/solid";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Blogs = [
   {
@@ -142,14 +142,12 @@ const BlogPage = () => {
                   {blog.title}
                 </h3>
                 <p className="text-sm text-gray-600 mt-2">{blog.description}</p>
-                <a
-                  href={blog.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to={blog.link}
                   className="mt-4 text-sm inline-block text-[#5c4efc]"
                 >
                   READ MORE
-                </a>
+                </Link>
               </div>
             </div>
           ))}

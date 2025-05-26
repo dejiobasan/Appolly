@@ -1,10 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/Images/Logo.png";
 import { Bars3Icon, XCircleIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 export default function Navbar() {
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const handleSectionNav = useCallback(
+    (sectionId) => {
+      navigate(`/#${sectionId}`);
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    },
+    [navigate]
+  );
 
   return (
     <nav className="bg-white text-[#2c2c2c] shadow-md mt-8 mx-4 rounded-md">
@@ -18,19 +30,23 @@ export default function Navbar() {
         </button>
         <div className="flex-1 lg:flex items-center lg:gap-12 font-medium justify-start lg:ml-4 hidden">
           <Link
-            to={"/"}
-            target="_blank"
-            rel="noopener noreferrer"
+            to="/"
             className="text-[#5c4efc] border-b-2 border-[#5c4efc] lg:pb-1 lg:text-xl"
           >
             HOME
           </Link>
-          <a href="#about" className="lg:text-xl hover:text-[#5c4efc]">
+          <button
+            onClick={() => handleSectionNav("about")}
+            className="lg:text-xl hover:text-[#5c4efc]"
+          >
             ABOUT
-          </a>
-          <a href="#features" className="lg:text-xl hover:text-[#5c4efc]">
+          </button>
+          <button
+            onClick={() => handleSectionNav("features")}
+            className="lg:text-xl hover:text-[#5c4efc]"
+          >
             FEATURES
-          </a>
+          </button>
         </div>
 
         <div className="flex-1 flex justify-center lg:ml-12 ml-8">
@@ -42,15 +58,13 @@ export default function Navbar() {
         </div>
 
         <div className="flex-1 hidden lg:flex items-center lg:-ml-16 justify-end lg:gap-6 font-medium mr-4">
-          <a href="#screenshot" className="lg:text-xl hover:text-[#5c4efc]">
-            SCREENSHOT
-          </a>
-          <Link
-            to={"/blog"}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => handleSectionNav("screenshot")}
             className="lg:text-xl hover:text-[#5c4efc]"
           >
+            SCREENSHOT
+          </button>
+          <Link to={"/blog"} className="lg:text-xl hover:text-[#5c4efc]">
             BLOG
           </Link>
         </div>
@@ -63,7 +77,7 @@ export default function Navbar() {
       </div>
       {menuOpen && (
         <div className="lg:hidden fixed inset-0 md:left-16 md:top-28 md:mt-12 md:z-50 z-20 mt-2 md:w-[267px]">
-          <div className="bg-white shadow-lg p-8 flex flex-col gap-6 relative">
+          <div className="bg-white items-start shadow-lg p-8 flex flex-col gap-6 relative">
             <button
               className="absolute top-4 right-4"
               onClick={() => setMenuOpen(false)}
@@ -72,35 +86,39 @@ export default function Navbar() {
               <XCircleIcon className="h-8 w-8 text-[#5c4efc]" />
             </button>
             <Link
-              to={"/"}
-              target="_blank"
-              rel="noopener noreferrer"
+              to="/"
               className="text-black text-sm hover:text-[#5c4efc]"
               onClick={() => setMenuOpen(false)}
             >
               HOME
             </Link>
-            <a
-              href="#about"
+            <button
               className="text-sm text-black hover:text-[#5c4efc]"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                handleSectionNav("about");
+                setMenuOpen(false);
+              }}
             >
               ABOUT
-            </a>
-            <a
-              href="#features"
+            </button>
+            <button
               className="text-sm text-black hover:text-[#5c4efc]"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                handleSectionNav("features");
+                setMenuOpen(false);
+              }}
             >
               FEATURES
-            </a>
-            <a
-              href="#screenshot"
+            </button>
+            <button
               className="text-sm text-black hover:text-[#5c4efc]"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => {
+                handleSectionNav("screenshot");
+                setMenuOpen(false);
+              }}
             >
               SCREENSHOT
-            </a>
+            </button>
             <Link
               to="/Blog"
               className="text-sm text-black hover:text-[#5c4efc]"

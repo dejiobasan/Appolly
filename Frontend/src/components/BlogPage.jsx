@@ -111,7 +111,7 @@ const BlogPage = () => {
           </p>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col justify-center items-center mt-10 p-10">
+      <div className="flex md:flex-row flex-col justify-center items-stretch mt-10 p-10 gap-4">
         <div className="flex flex-col gap-6 px-4 w-full max-w-[771px] mx-auto mb-6">
           {currentBlogs.map((blog, index) => (
             <div
@@ -242,7 +242,7 @@ const BlogPage = () => {
           </div>
         </div>
       </div>
-      <div className="relative flex md:flex-row flex-col h-3/4 items-center justify-center bg-[#232233] lg:space-x-24 lg:px-6 lg:py-12 md:space-x-8 md:px-4 md:py-8 space-y-8">
+      <div className="relative flex md:flex-row flex-col h-3/4 items-stretch justify-center bg-[#232233] lg:space-x-24 lg:px-6 lg:py-12 md:space-x-8 md:px-4 md:py-8 space-y-8">
         <div className="flex flex-col flex-1 items-start justify-start relative z-10 md:px-4 md:mt-0 px-2 mt-10">
           <h1 className="text-white font-bold lg:text-4xl text-2xl mb-4">
             LOGO

@@ -111,7 +111,7 @@ const BlogDetails = () => {
           </p>
         </div>
       </div>
-      <div className="flex md:flex-row flex-col justify-center items-center mt-10 p-10">
+      <div className="flex md:flex-row flex-col justify-center items-stretch mt-10 p-10">
         <div className="flex flex-col gap-6 px-4 w-full max-w-[771px] mx-auto mb-6">
           <div className="bg-white text-black rounded-lg overflow-hidden w-full lg:h-auto md:h-[300px] h-auto mx-auto">
             <img
@@ -180,10 +180,10 @@ const BlogDetails = () => {
               of the sofa. You’ve sacrificed yourself to karaoke.
             </p>
           </div>
-          <div className="flex md:flex-row flex-col items-start justify-between space-x-4  mt-4">
+          <div className="flex md:flex-row flex-col items-start justify-between space-x-4 space-y-4 mt-4">
             <div className="flex flex-col">
               <img src={BlogImage9} className="w-full h-56 rounded-lg" />
-              <p className="text-center mt-4">
+              <p className="text-start mt-4">
                 The birth of Memphis Design was a lot like this, starting with a
                 gathering of architects and industrial designers in Milan, Italy
                 in 1981. But it wasn’t the party that bored the guests. It was
@@ -193,7 +193,7 @@ const BlogDetails = () => {
             </div>
             <div className="flex flex-col">
               <img src={BlogImage8} className="w-full h-56 rounded-lg" />
-              <p className="text-center mt-4">
+              <p className="text-start mt-4">
                 Long before all this, there had been a number of fine art and
                 design movements that precipitated Memphis Design, and these
                 were likely on the guests’ minds as they traced where it all had
@@ -380,7 +380,7 @@ const BlogDetails = () => {
           </div>
         </div>
       </div>
-      <div className="relative flex md:flex-row flex-col h-3/4 items-center justify-center bg-[#232233] lg:space-x-24 lg:px-6 lg:py-12 md:space-x-8 md:px-4 md:py-8 space-y-8">
+      <div className="relative flex md:flex-row flex-col h-3/4 items-stretch justify-center bg-[#232233] lg:space-x-24 lg:px-6 lg:py-12 md:space-x-8 md:px-4 md:py-8 space-y-8">
         <div className="flex flex-col flex-1 items-start justify-start relative z-10 md:px-4 md:mt-0 px-2 mt-10">
           <h1 className="text-white font-bold lg:text-4xl text-2xl mb-4">
             LOGO
